@@ -1,0 +1,64 @@
+\:root
+    --button-color: #cb68b6
+
+html,body
+    width: 100%
+    height: 100%
+
+button
+    border: 1px solid var(--button-color)
+    border-radius: 4px
+    padding: 10px 10px
+    box-sizing: border-box
+    background: none
+    outline: none
+    color: var(--button-color)
+
+header
+    display: grid
+    grid-template-columns: 1fr 80px
+    grid-gap: 10px
+    margin: 10px 20px
+    align-content: center
+    align-items: center
+    justify-content: center
+    
+    .branding
+        display: flex
+        align-items: center
+
+        .logo
+            margin-right: 20px
+
+    button.login
+        border-width: 2px
+        border-radius: 60px
+    
+form.login
+    display: none
+
+form.register
+    width: 300px
+    box-shadow: 0 0 8px 7px #ddd
+    border-radius: 10px
+    padding: 20px
+
+    div
+        position: relative
+
+        input
+            border: none
+            border-bottom: 1px solid var(--button-color)
+            transition: linear 200ms
+            &::placeholder
+                color: #ffffff
+            &:focus::placeholder
+                color: #aaaaaa
+
+        label
+            position: absolute
+            left: 10px
+            transition: linear 200ms
+
+        input:focus + label
+            transform: translateY(-30px)
